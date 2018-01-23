@@ -1,0 +1,20 @@
+
+spring:
+  profiles.active: production
+
+logging.level.org.springframework.web: DEBUG
+
+openweather:
+  url: http://samples.openweathermap.org/data/2.5/forecast?q={city}&units=metric&appid=b6907d289e10d714a6e88b30761fae22
+
+---
+spring:
+  profiles: testing
+
+
+---
+spring:
+  profiles: production
+
+openweather:
+  url: http://api.openweathermap.org/data/2.5/forecast?q={city}&units=metric&appid=cfa79a4713ed455acdc7f093b7ced0a2
